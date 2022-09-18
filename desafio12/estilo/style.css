@@ -1,11 +1,24 @@
 @charset "UTF8";
 
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root{
+    --font1:verdana,Geneva,tahoma,sans-serif;
+    --font2:'Passion One', cursive;
+    --font3:'Sriracha', cursive;
+}
+
+/*para aplicar variaveis globais apra a o eu html */
+
 *{
     margin: 0px;
     padding: 0px;
+    font-size: 1em;
 }
 
 html, body {
+    font-family: var(--font1);
     min-height: 100vh;/* o tamanho minimo sera 100% da altura da minha view port "vh" */
     background-color: dark;
 }
@@ -19,8 +32,13 @@ header{
 }
 
 header > h1{
+    font-family: var(--font2);
     padding-top: 50px;
-    text-transform: small-caps; /*para transformar todo o texto no que eu quiser, por exemplo "uppercase" transformaria tudo em letra maiuscula. Em " samll-caps continua com as miuscula normal. */
+    text-transform: small-caps; 
+    font-size: 10vw;/*para variairar o tamanho de acorodo com o tamanha da largura "width" da tela */ 
+
+
+    /*para transformar todo o texto no que eu quiser, por exemplo "uppercase" transformaria tudo em letra maiuscula. Em " samll-caps continua com as miuscula normal. */
 
 }
 
@@ -40,10 +58,12 @@ header a:hover, footer a:hover {
 } 
 
 section{
+    font-family: var(--font3);
     padding-top: 10vh;
     padding-bottom: 10vh;/* colocando como " vh" quando eu aumento e diminuo a tela, a secao que esta com vh aumenta e diminui tambem*/
     line-height:2em ;
     padding-left: 30px;
+    font-size: 3.8vw;
 
 
 }
@@ -60,7 +80,9 @@ section.imagem{
 }
 section.imagem > p {
     background-color: rgba(0, 0, 0, 0.250);
-    width: 400px;
+    padding: 8px;
+    display: inline-block;
+     /* uma caixa que se adapta ao tamanho do conteudo*/
 }
 
 footer{
